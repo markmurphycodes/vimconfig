@@ -205,6 +205,11 @@ let g:coc_global_extension = ['coc-tsserver', 'coc-prettier', 'coc-eslint']
 
   augroup END
 
+"---------------
+" ctags stuff
+"---------------
+nnoremap <silent> <Leader>b :TagbarToggle<CR>
+nnoremap <leader>. :CtrlPTag<cr>
 
 "---------------
 "Prettier
@@ -273,6 +278,8 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'kien/ctrlp.vim'
+Plug 'majutsushi/tagbar'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
